@@ -1,0 +1,10 @@
+#!/bin/bash
+
+python tests.py
+exit_code=$(echo $?)
+if [ $exit_code = 1 ]; then
+	echo "All tests in 'test.py' are correct. Commit successfull."
+else
+	echo "Error. Not all tests in 'tests.py' are correct. Run 'python tests.py' and look for problems."
+  exit 1
+fi
